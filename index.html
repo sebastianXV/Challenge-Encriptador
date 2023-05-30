@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastian Rojas</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="code.js"></script>
+</head>
+
+<body>
+
+    <div class="todo">
+
+        <header>
+
+            <div class="logo">
+                <img src="img/alura.svg" alt="logo">
+            </div>
+
+            <div>
+                <button class="dark-mode-toggle" onclick="toggleDarkMode()"></button>
+            </div>
+
+        </header>
+
+        <div class="container">
+
+            <article>
+
+                <div class="home-text1">
+
+                    <textarea type="text" class="encriptar" placeholder="Escribe un texto para encriptarlo"></textarea>
+
+                </div>
+
+                <section>
+
+                    <div class="end">
+
+                        <p><img src="img/Admiracion.png" alt=""> Solo letras minusculas y sin acentos</p>
+
+                    </div>
+
+                    <div class="end2">
+
+                        <button class="encriptar" onclick="encriptarTexto()">Encriptar</button>
+                        <button class="desencriptar" onclick="desencriptarTexto()">Desencriptar</button>
+
+                    </div>
+
+                </section>
+
+            </article>
+
+            <aside>
+                <div class="alerta">
+                    <textarea type="text" class="textoCopiar"></textarea>
+
+                    <div class="texto-aside">
+                        <h2 class="aside-titulo">Ningún mensaje fue encontrado</h2>
+                        <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                    </div>
+
+                    <button class="copiar" onclick="copiarTexto()">Copiar</button>
+                    
+                </div>
+
+            </aside>
+        </div>
+
+        <footer>
+
+            <p>Desarrollado por Juan Sebastian Rojas Sanchez</p>
+
+            <div class="redes">
+
+                <a href="#" class="icons"> <img src="img/linkedin.png" alt="linkedin"></a>
+
+                <a href="#" class="icons"> <img src="img/github.webp" alt="github"></a>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

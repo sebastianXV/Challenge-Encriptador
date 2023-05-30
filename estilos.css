@@ -1,0 +1,354 @@
+@charset "UTF-8";
+html {
+  padding: 0;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  background-color: #F3F5FC;
+  font-family: sans-serif;
+  margin: 0;
+}
+body .todo {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+body .todo header {
+  align-self: flex-start;
+  margin: 30px 50px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.container article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container article .home-text1 {
+  color: #0A3871;
+  height: 100%;
+  width: 100%;
+}
+.container article .home-text1 .encriptar {
+  resize: none;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  background-color: #f2f2f2;
+  border: none;
+  font-size: 3em;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  outline: none;
+  color: #0A3871;
+}
+.container article section {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  justify-content: center;
+}
+.container article section .end {
+  color: #495057;
+  font-weight: 18px;
+}
+.container article section .end2 {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 35px;
+  align-items: center;
+}
+.container article section .end2 .encriptar:hover {
+  box-shadow: 0 0 20px #0A3871;
+}
+.container article section .end2 .desencriptar {
+  background-color: #F3F5FC;
+  color: #0A3871;
+  border: 1px solid #0A3871;
+}
+.container article section .end2 .desencriptar:hover {
+  box-shadow: 0 0 20px #0A3871;
+  border: none;
+}
+.container article section .end2 .desencriptar:active {
+  background-color: #a5a5a5;
+}
+
+button:active {
+  transform: translateY(2px);
+  background-color: #0F53A0;
+}
+
+aside {
+  text-align: justify;
+  color: #495057;
+  display: flex;
+  height: 100%;
+  width: 30%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+aside .textoCopiar {
+  resize: none;
+  border: none;
+  background: url(img/Muñeco.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  outline: none;
+  height: 35%;
+  width: 80%;
+}
+aside .alerta {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+}
+aside .copiar {
+  height: 50px;
+  display: none;
+}
+aside .copiar:active {
+  background-color: #a5a5a5;
+}
+aside .copiar {
+  background-color: #F3F5FC;
+  color: #0A3871;
+  border: 1px solid #0A3871;
+}
+aside .copiar:hover {
+  box-shadow: 0 0 20px #0A3871;
+  border: none;
+}
+
+footer {
+  background-color: #0A3871;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: row;
+}
+footer .redes {
+  justify-content: center;
+  display: flex;
+  margin-right: 4%;
+  gap: 15px;
+  align-items: center;
+}
+footer .redes .icons {
+  height: 30px;
+  width: 30px;
+}
+footer .redes .icons img {
+  height: 100%;
+}
+footer p {
+  margin-right: 20px;
+  justify-content: center;
+  display: flex;
+  color: #fff;
+  align-items: flex-end;
+}
+
+button {
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #0A3871;
+  width: 328px;
+  height: 50px;
+  border-radius: 18px;
+  border: none;
+}
+
+button.dark-mode-toggle {
+  margin-top: 20px;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 30px;
+  background-color: #222;
+  border-radius: 15px;
+  border: none;
+  box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.2);
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+button.dark-mode-toggle:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+button.dark-mode-toggle.dark {
+  background-color: #4e4e4e;
+  left: 20px;
+}
+
+button.dark-mode-toggle.dark::after {
+  transform: translateX(20px);
+}
+
+body.dark-mode {
+  background-color: #202124;
+  color: #eee;
+}
+body.dark-mode .logo {
+  padding: 15px;
+  border-radius: 100%;
+  background-color: #F3F5FC;
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+  transition: box-shadow 0.2s ease-in-out;
+}
+body.dark-mode .logo:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+body.dark-mode ::-moz-placeholder {
+  color: #686868;
+}
+body.dark-mode ::placeholder {
+  color: #686868;
+}
+body.dark-mode article .home-text1 .encriptar {
+  background-color: #303134;
+  color: #fff;
+  border: solid 0.5px #BDC1C6;
+  box-shadow: 0px 0px 4px #BDC1C6;
+}
+body.dark-mode article section .end {
+  color: #BDC1C6;
+}
+body.dark-mode article section .end2 .encriptar {
+  border: 1px solid #fff;
+}
+body.dark-mode article section .end2 .encriptar:hover {
+  box-shadow: 0 0 20px #0A3871;
+}
+body.dark-mode article section .end2 .desencriptar:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  border: none;
+}
+body.dark-mode aside {
+  background-color: #303134;
+  border: solid 1px #BDC1C6;
+  box-shadow: 0px 0px 4px #BDC1C6;
+}
+body.dark-mode aside .textoCopiar {
+  color: #fff;
+}
+body.dark-mode aside .alerta {
+  color: #fff;
+}
+body.dark-mode aside .copiar:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  border: none;
+}
+
+/* Estilos para pantallas medianas */
+@media only screen and (max-width: 1150px) {
+  body .todo .container {
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+  }
+  body .todo .container article {
+    height: 60%;
+  }
+  body .todo .container .home-text1 .encriptar {
+    font-size: 2em;
+  }
+  body .todo aside {
+    height: 40%;
+    width: 100%;
+  }
+  body .todo aside .textoCopiar {
+    background: none;
+  }
+}
+/* Estilos para pantallas muy pequeñas */
+@media only screen and (max-width: 740px) {
+  body .todo nav {
+    flex-direction: column;
+  }
+  body .todo .logo img {
+    height: 40px;
+  }
+  body .todo .container .home-text1 .encriptar {
+    font-size: 1em;
+  }
+  body .todo article {
+    width: 100%;
+  }
+  body .todo article section {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  body .todo article section .end2 {
+    flex-direction: column;
+  }
+  body .todo aside {
+    width: 100%;
+  }
+  body .todo aside .copiar {
+    width: 40%;
+  }
+  .encriptar {
+    width: 60%;
+    height: 40px;
+  }
+  .desencriptar {
+    width: 60%;
+    height: 40px;
+  }
+}
+/* Estilos para pantallas muy MUY pequeñas */
+@media only screen and (max-width: 375px) {
+  .end2 .encriptar {
+    width: 60%;
+    height: 30px;
+  }
+  .end2 .desencriptar {
+    width: 60%;
+    height: 30px;
+  }
+  .logo img {
+    height: 30px;
+  }
+  footer {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=estilos.css.map */
