@@ -20,8 +20,9 @@
                 <img src="img/alura.svg" alt="logo">
             </div>
 
-            <div>
-                <button class="dark-mode-toggle" onclick="toggleDarkMode()"></button>
+            <div id="dark-mode-toggle-container">
+                <input type="checkbox" id="dark-mode-toggle" onclick="toggleDarkMode()">
+                <label for="dark-mode-toggle"></label>
             </div>
 
         </header>
@@ -32,7 +33,8 @@
 
                 <div class="home-text1">
 
-                    <textarea type="text" class="encriptar" placeholder="Escribe un texto para encriptarlo"></textarea>
+                    <textarea type="text" class="encriptar"
+                        placeholder="Escribe un texto para encriptar o desencriptar"></textarea>
 
                 </div>
 
@@ -64,8 +66,8 @@
                         <p>Ingresa el texto que desees encriptar o desencriptar</p>
                     </div>
 
-                    <button class="copiar" onclick="copiarTexto()">Copiar</button>
-                    
+                    <button class="copiar" onclick="copiarResultado()">Copiar</button>
+
                 </div>
 
             </aside>

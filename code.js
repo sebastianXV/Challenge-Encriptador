@@ -15,32 +15,30 @@ function ocultarTextoAside() {
     if (textoCopiar.value.trim() === "") {
       textoAside.style.display = "block";
       botonCopiar.style.display = "none";
+      
     } else {
       textoAside.style.display = "none";
       botonCopiar.style.display = "block";
+      textoCopiar.style.backgroundImage = "none";
     }
   
-    textoCopiar.style.backgroundImage = "none";
+    
   }
   
   function encriptarTexto() {
     const textoOriginal = document.querySelector(".encriptar").value;
     const textoEncriptado = encriptar(textoOriginal);
     document.querySelector(".textoCopiar").value = textoEncriptado;
-    document.querySelector(".aside-titulo").textContent = "Texto encriptado";
     ocultarTextoAside(); // Ocultar texto aside después de encriptar
     document.querySelector(".encriptar").value = ""; // Limpiar el campo de encriptar
-    document.querySelector(".encriptar").readOnly = true; // Desactivar la escritura en el campo de texto
     document.querySelector(".copiar").style.display = "block"; // Mostrar el botón de copiar
   }
   
   function desencriptarTexto() {
-    const textoEncriptado = document.querySelector(".textoCopiar").value;
+    const textoEncriptado = document.querySelector(".encriptar").value;
     const textoOriginal = desencriptar(textoEncriptado);
-    document.querySelector(".encriptar").value = textoOriginal;
-    document.querySelector(".aside-titulo").textContent = "Texto desencriptado";
+    document.querySelector(".textoCopiar").value = textoOriginal;
     ocultarTextoAside(); // Ocultar texto aside después de desencriptar
-    document.querySelector(".encriptar").readOnly = false; // Activar la escritura en el campo de texto
     document.querySelector(".copiar").style.display = "block"; // Mostrar el botón de copiar
   }
   
@@ -74,6 +72,7 @@ function ocultarTextoAside() {
     const resultado = document.querySelector(".textoCopiar");
     resultado.select();
     resultado.setSelectionRange(0, 99999);
-    document.execCommand("copy");
-    alert("¡El texto ha sido copiado!");
+    
+      const successful = document.execCommand("copy");
   }
+  
